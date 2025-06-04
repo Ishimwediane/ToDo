@@ -1,13 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
-// https://vitejs.dev/config/
+import tailwindcss from '@tailwindcss/vite'
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: './', // This ensures assets are loaded relative to the current path
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: true,
-  },
+  plugins: [react(),tailwindcss(),],
 })
