@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { Task, Duration } from '../types/task';
+import type { Task } from '../types/task';
 import { useTaskContext } from '../context/TaskContext';
 import TaskForm from './TaskForm';
 
