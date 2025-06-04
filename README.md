@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+Deployement version:https://to-do-sable-nu.vercel.app/ 
+To-Do Planning Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based To-Do planning application that helps users organize their tasks with different time durations.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✨ Add tasks with custom durations (Daily, Weekly, Monthly, Yearly)
+- 📋 View all tasks in a clean, organized list
+- 🔄 Edit existing tasks
+- 🗑️ Delete tasks
+- 🔍 Filter tasks by duration
+- 💾 Local storage persistence
+- 🎨 Modern UI with Tailwind CSS
 
-## Expanding the ESLint configuration
+Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Local Storage for data persistence
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+Project Structure
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+src/
+├── components/
+│   ├── Hero.tsx         # Hero section with motivational text
+│   ├── TaskForm.tsx     # Form for adding/editing tasks
+│   ├── TaskList.tsx     # List of tasks with edit/delete functionality
+│   └── FilterBar.tsx    # Duration filter buttons
+├── context/
+│   └── TaskContext.tsx  # Global state management
+└── types/
+    └── task.ts         # TypeScript types and interfaces
 ```
+Usage
+
+1. Enter a task name in the input field
+2. Select a duration from the dropdown (Daily, Weekly, Monthly, Yearly)
+3. Click "Add Task" to create a new task
+4. Use the filter buttons to view tasks by duration
+5. Edit or delete tasks using the respective buttons
+6. All changes are automatically saved to local storage
